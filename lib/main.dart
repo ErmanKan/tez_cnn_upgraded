@@ -83,10 +83,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: const Text('Blood Picker Demo'),
         ),
-        body: Center(
+        body: SingleChildScrollView(child: Center(
           child:
           Column(
               children: [
@@ -132,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                 )
 
               ]),
-        ),
+        ),),
         floatingActionButton: SpeedDial(
           animatedIcon: AnimatedIcons.menu_close,
           children: [
